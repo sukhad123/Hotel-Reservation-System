@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<BorderPane maxHeight="1.7976931348623157E308"  maxWidth="1.7976931348623157E308" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="applicationControllers.HomepageController">
+   <right>
+      <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" style="-fx-background-color: FBFBFB;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="768.0" fitWidth="943.0" nodeOrientation="INHERIT" opacity="0.15" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Downloads/452376242_1018253413641350_3829730897763804464_n.jpg" />
+               </image>
+            </ImageView>
+            <Text layoutX="205.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Silver Hotel Group">
+               <font>
+                  <Font name="Dubai Light" size="36.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="50.0" fitWidth="45.0" layoutX="131.0" layoutY="114.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Downloads/hotel-solid.jpg" />
+               </image>
+            </ImageView>
+            <Text layoutX="131.0" layoutY="367.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Easily manage your transactions, reservations, and other tasks all in one place. Whether you’re reserving a room, browsing our services, or completing a purchase, our platform is designed for a seamless, user-friendly experience. Explore your options and enjoy the convenience at your fingertips" wrappingWidth="486.41796875">
+               <font>
+                  <Font name="Calibri" size="24.0" />
+               </font>
+            </Text>
+            <Text layoutX="131.0" layoutY="231.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hotel Reservation Kiosk" wrappingWidth="379.13671875">
+               <font>
+                  <Font name="Gill Sans Ultra Bold Condensed" size="46.0" />
+               </font>
+            </Text>
+            <Button fx:id="reserveCustBtn" layoutX="802.0" layoutY="311.0" mnemonicParsing="false" onAction="#reserveCustomer" prefHeight="62.0" prefWidth="191.0" text="Reserve Now" textFill="#152805">
+               <font>
+                  <Font name="Impact" size="25.0" />
+               </font>
+            </Button>
+            <Button fx:id="adminBtn" layoutX="805.0" layoutY="449.0" mnemonicParsing="false" onAction="#adminActionBtn" prefHeight="63.0" prefWidth="194.0" text="Admin Login" textFill="#152805">
+               <font>
+                  <Font name="Impact" size="25.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>
