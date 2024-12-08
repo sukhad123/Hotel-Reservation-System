@@ -30,4 +30,4 @@ Insert gif or link to demo
 
 ## Authors
 
-- [@octokatherine](https://www.github.com/sukhad123)
+- [@sukhad123](https://www.github.com/sukhad123)
