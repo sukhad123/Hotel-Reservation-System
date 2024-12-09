@@ -1,4 +1,5 @@
 # Hotel Reservation Desktop Application
+![Alt text](src/images/hotelreservation.png)
 ## Self-Checkout for Users:
 
 Users can check out of the hotel, possibly after viewing their bill and confirming their charges.
@@ -30,8 +31,6 @@ Insert gif or link to demo
 
 
 
-
-![Alt text](src/images/hotelreservation.png)
 ## Authors
 
 - [@sukhad123](https://www.github.com/sukhad123)
