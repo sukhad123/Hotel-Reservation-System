@@ -29,12 +29,7 @@ public class Main extends Application {
 	private Booking temp = new Booking();
 	private int tmpGuests;
 	
-	private ObservableList<Room> availableRooms;
-	
-	
-	//this variable contains all the room of the hotel
-	
-	//hotelRoom
+	private ObservableList<Room> availableRooms; 
 	private  HotelRoom x;
 	//private JDBCDA database;
 	
@@ -48,12 +43,9 @@ public class Main extends Application {
 		x = new HotelRoom();
 		//billService();
 		intializer();
-		
-		
-		
+	
 	}
-	
-	
+
 	//billservice
 	public void billService()
 	{

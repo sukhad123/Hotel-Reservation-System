@@ -168,48 +168,7 @@ public class adminRoomBookingController1 implements AbstractController  {
     	}
     	if( guesttmp < 1)
     	{
-    		 
-    		/* Alert info1 = new Alert(AlertType.CONFIRMATION);
- 	        info1.setTitle("Select Days");
- 	        
-
- 	        // Create UI components for date and number of days
- 	        DatePicker datePicker = new DatePicker();
- 	        datePicker.setPromptText("Select a date");
- 	        
- 	        TextField daysField = new TextField();
- 	        daysField.setPromptText("Enter number of days");
-
- 	        // Add components to a VBox
- 	        VBox content = new VBox(10); // 10px spacing
- 	        content.getChildren().addAll(datePicker, daysField);
-
- 	        // Set the VBox as the content of the alert
- 	        info1.getDialogPane().setContent(content);
-
- 	        // Show the alert
- 	        info1.showAndWait();
- 	       if (datePicker.getValue() != null && !daysField.getText().isEmpty()) {
-	            String selectedDate = datePicker.getValue().toString();
-	            String numberOfDays = daysField.getText();
-	            Reservation tmp = new Reservation(LocalDate.parse(selectedDate), LocalDate.parse(selectedDate).plusDays(Integer.parseInt(numberOfDays)));
-	            mainApp.getBooking().setReservation(tmp);
-	            //now another 
-	            //lets save reservation
-	            
-	        } 
-	        
-	        	else {
-    	        	Alert info = new Alert(AlertType.ERROR);
-    	    	   	info.setTitle("Invalid Input");
-    	    	   	info.setHeaderText("Input Error");
-    	    	   	info.showAndWait(); 
-	        	}}
- 	       else
- 	       { Alert info = new Alert(AlertType.ERROR);
-   	   	info.setTitle("Invalid Input");
-   	   	info.setHeaderText("Voilating Hotel Occupancy Policy");
-   	   	info.showAndWait();*/
+    		
     		
     		 Alert info1 = new Alert(Alert.AlertType.CONFIRMATION);
     	        info1.setTitle("Reservation Details");
@@ -307,16 +266,20 @@ public class adminRoomBookingController1 implements AbstractController  {
     	        	                        	if (isValidInteger(nightChargeInput)) {
     	        	                        	    int nightCharge = Integer.parseInt(nightChargeInput);
     	        	                        	    room.setRate(nightCharge);
-    	        	                        	    mainApp.getBooking().setRooms(new ArrayList<>(selectedRooms));
+    	        	                    
     	        	                        	    //System.out.println(mainApp.getBooking().getGuestClass().getGuests());
+    	        	                        	    if(i == selectedRooms.size() -1)
+    	        	                        	    {
+    	        	                        	    	mainApp.getBooking().setRooms(new ArrayList<>(selectedRooms));
     	    	        	                        JDBCDA database = new JDBCDA();
-    	    	        	                           database.addBooking(mainApp.getBooking().getGuestClass(), mainApp.getBooking().getReservation(), mainApp.getBooking().getGuestClass().getGuests(), mainApp.getBooking().getTotal());
+    	    	        	                          database.addBooking(mainApp.getBooking().getGuestClass(), mainApp.getBooking().getReservation(), mainApp.getBooking().getGuestClass().getGuests(), mainApp.getBooking().getTotal());
     	    	        	                          database.addBookedRoom(mainApp.getBooking().getRooms());
-    	    	        	                           Alert info = new Alert(AlertType.CONFIRMATION);
+    	    	        	                         Alert info = new Alert(AlertType.CONFIRMATION);
       	        	                        	    info.setTitle("ROOM BOOKED");
       	        	                        	    info.setHeaderText("Booking Done");
       	        	                        	    info.showAndWait();
       	        	                        	    mainApp.AdminFirstPage();
+    	        	                        	    }
     	        	                        	    // Continue with your logic to process the valid nightCharge
     	        	                        	} else {
     	        	                        	    Alert info = new Alert(AlertType.ERROR);
@@ -325,10 +288,7 @@ public class adminRoomBookingController1 implements AbstractController  {
     	        	                        	    info.showAndWait();
     	        	                        	}
 
-    	        	                            // Assuming Room class has a setNightCharge method or similar
-    	        	                         
     	        	                          
-    	        	                          //save
     	        	                          
     	        	                          
     	        	                           // System.out.println("Room " + room.getRoomType() + " (ID: " + room.getId() + ") Night Charge: " + nightCharge);
