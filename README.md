@@ -4,15 +4,17 @@
 
 Users can check out of the hotel, possibly after viewing their bill and confirming their charges.
 ## Admin Dashboard:
-
+![Alt text](src/images/admin.png)
 ### Booking Management
  Admin can view all bookings, check booking status, and delete bookings if needed.
+ ![Alt text](src/images/currentBooking.png)
 ### Discount Management
  Admin can apply discounts to bookings (e.g., up to 25% discount).
+ ![Alt text](src/images/discount.png)
 ### Room Availability
 Admin can check the availability of rooms and manage them as well as all the bookings.
-### Booking Details
- Admin can access detailed information about each booking, including guest name, room type, total cost, etc.
+![Alt text](src/images/availableRooms.png)
+
 
 ## Installation
 
